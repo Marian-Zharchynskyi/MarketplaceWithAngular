@@ -15,6 +15,7 @@ import {HousingLocationInfo} from '../housinglocation';
     <section class="results">
       <app-housing-location></app-housing-location>
     </section>
+    
   `,
   styleUrls: ['./home.css'],
 })
