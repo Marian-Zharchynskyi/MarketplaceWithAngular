@@ -1,8 +1,15 @@
 import {Routes} from '@angular/router';
-import {Home} from './home/home';
-import {Details} from './details/details';
+import {Home} from './features/home/home';
+import {Details} from './features/details/details';
+import { MainLayout } from './core/layouts/main-layout';
 
 export const routeConfig: Routes = [
-  {path: '', component: Home, title: 'Home page'},
-  {path: 'details/:id', component: Details, title: 'Home details'},
+  {
+    path: '',
+    component: MainLayout,
+    children: [
+      { path: '', component: Home, title: 'Home page' },
+      { path: 'details/:id', component: Details, title: 'Home details' },
+    ],
+  },
 ];
